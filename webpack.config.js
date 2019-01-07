@@ -1,23 +1,24 @@
-const path = require('path');
+const path = require("path");
 
-module.exports = {  
-    entry: {  
-        app: [  './js/index.js',
-                './scss/custom.scss' ]
+module.exports = {
+  entry: {
+    app: "./js/index.js"
   },
 
-    output: {  
-        path: path.resolve(__dirname, 'dist'),  
-        filename: 'bundle.js'  
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js"
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.scss$/,
         use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ]
-    }]
-}
+      }
+    ]
+  }
 };
